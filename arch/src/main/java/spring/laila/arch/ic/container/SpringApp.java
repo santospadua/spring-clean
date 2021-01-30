@@ -9,12 +9,16 @@ public class SpringApp
 
 	public static void main(String[] args)
 	{
-		context = new ClassPathXmlApplicationContext("applicationContext.xml");
-
-		Admin administrator1 = context.getBean("admin1", Admin.class);
-		Admin administrator2 = context.getBean("admin2", Admin.class);
-
-		System.out.println(administrator1.getOrder());
-		System.out.println(administrator2.getOrder());
+		// Application Context
+		context = new ClassPathXmlApplicationContext("container-applicationContext.xml");
+		
+		// Referencing beans
+		Admin administrator1 = context.getBean("faceAdmin", Admin.class);
+		Admin administrator2 = context.getBean("whatsAdmin", Admin.class);
+		
+		// Access level X1
+		System.out.println(administrator1.getAccessLevel());
+		// Access level X2
+		System.out.println(administrator2.getAccessLevel());
 	}
 }

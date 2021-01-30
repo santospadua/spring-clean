@@ -3,8 +3,8 @@ package spring.laila.arch.ic.container;
 public class WhatsAdmin implements Admin
 {
 	@Override
-	public String getOrder()
+	public String getAccessLevel()
 	{
-		return "Wow, whatsapp is also administrate by Facebook!";
+		return "X2";
 	}
 }

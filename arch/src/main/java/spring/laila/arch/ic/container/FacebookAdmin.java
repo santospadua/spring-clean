@@ -3,8 +3,8 @@ package spring.laila.arch.ic.container;
 public class FacebookAdmin implements Admin
 {
 	@Override
-	public String getOrder()
+	public String getAccessLevel()
 	{
-		return "Give me Mike Zuckerberg";
+		return "X1";
 	}
 }
