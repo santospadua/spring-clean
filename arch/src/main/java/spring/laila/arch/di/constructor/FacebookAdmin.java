@@ -2,20 +2,21 @@ package spring.laila.arch.di.constructor;
 
 public class FacebookAdmin implements Admin
 {
-	private Responsability responsability;
-
-	public FacebookAdmin(Responsability responsability)
+	private ConfigUsers configuration;
+	
+	public FacebookAdmin(ConfigUsers configuration)
 	{
-		this.responsability = responsability;
+		this.configuration = configuration;
 	}
 	@Override
-	public String getOrder()
+	public String getAccessLevel()
 	{
-		return "Give me Mike Zuckerberg";
+		return "X1";
 	}
+	// Recovery the information from constructor dependency
 	@Override
-	public String getResponsability()
+	public String getMyUserConfiguration()
 	{
-		return responsability.getResponsability();
+		return this.configuration.myUsers();
 	}
 }

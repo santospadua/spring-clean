@@ -18,6 +18,7 @@ public class SpringApp
 		
 		// Access level X1
 		System.out.println(administrator1.getAccessLevel());
+		
 		// Access level X2
 		System.out.println(administrator2.getAccessLevel());
 	}
