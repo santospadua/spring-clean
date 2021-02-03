@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.springframework.org/schema/beans">
+
+	<!-- Dependencies and beans -->
+
+	<bean id="superUser"
+		class="spring.laila.arch.di.setter.SystemUsers">
+	</bean>
+
+	<bean id="whatsAdmin"
+		class="spring.laila.arch.di.setter.WhatsAdmin">
+
+		<!-- setter injection -->
+		<!-- lower case -->
+		<property name="configuration" ref="superUser"></property>
+	</bean>
+</beans>
