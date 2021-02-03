@@ -1,6 +1,7 @@
 package spring.laila.arch.di.literal;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringApp
@@ -24,5 +25,7 @@ public class SpringApp
 		// Literal values injection dependency
 		System.out.println(administrator1.getNumber());
 		System.out.println(administrator1.getCode());
+		
+		((AbstractApplicationContext) context).close();
 	}
 }

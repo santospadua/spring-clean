@@ -1,6 +1,7 @@
 package spring.laila.arch.ic.container;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringApp
@@ -21,5 +22,7 @@ public class SpringApp
 		
 		// Access level X2
 		System.out.println(administrator2.getAccessLevel());
+		
+		((AbstractApplicationContext) context).close();
 	}
 }

@@ -1,6 +1,7 @@
 package spring.laila.arch.di.setter;
 
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class SpringApp
@@ -20,5 +21,7 @@ public class SpringApp
 		
 		// Antonio -> Super User
 		System.out.println(administrator1.getMyUserConfiguration());
+		
+		((AbstractApplicationContext) context).close();
 	}
 }
