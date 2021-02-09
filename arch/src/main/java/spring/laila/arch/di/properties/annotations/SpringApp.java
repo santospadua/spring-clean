@@ -1,4 +1,4 @@
-package spring.laila.arch.di.qualifiers.annotations;
+package spring.laila.arch.di.properties.annotations;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.AbstractApplicationContext;
@@ -11,20 +11,16 @@ public class SpringApp
 	public static void main(String[] args)
 	{
 		// Application Context
-		context = new ClassPathXmlApplicationContext("annotations-di-qualifiers-applicationContext.xml");
+		context = new ClassPathXmlApplicationContext("annotations-di-properties-applicationContext.xml");
 		
 		// Referencing beans
-		Admin administrator1 = context.getBean("facebookAdmin", Admin.class);
-		Admin administrator2 = context.getBean("whatsAdmin", Admin.class);
+		FacebookAdmin administrator1 = context.getBean("facebookAdmin", FacebookAdmin.class);
 		
-		// Access level X1 and Rodrigues
+		// Accessing the fields
 		System.out.println(administrator1.getAccessLevel());
 		System.out.println(administrator1.getConfiguration());
+		System.out.println(administrator1.getNumberl());
 		
-		// Access level X2 and Padua
-		System.out.println(administrator2.getAccessLevel());
-		System.out.println(administrator2.getConfiguration());
-			
 		// Close context
 		((AbstractApplicationContext) context).close();
 	}
