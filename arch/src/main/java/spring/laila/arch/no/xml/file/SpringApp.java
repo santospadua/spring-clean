@@ -14,9 +14,15 @@ public class SpringApp
 		// Recovering bean
 		Admin administrator1 = context.getBean("facebookAdmin", Admin.class);
 		
+		// Recovering bean
+		FacebookAdmin administrator2 = context.getBean("facebookAdmin", FacebookAdmin.class);
+		
 		// Returning...
 		System.out.println(administrator1.getAccessLevel());
 		System.out.println(administrator1.getConfiguration());
+		
+		// From the properties file
+		System.out.println("Number: " + administrator2.getNumber() + " " + "Code: " + administrator2.getCode());
 		
 		// Close context
 		((AbstractApplicationContext) context).close();
